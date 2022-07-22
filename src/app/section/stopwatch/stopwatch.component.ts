@@ -32,4 +32,20 @@ export class StopwatchComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  ngAfterContentInit(): void {
+    console.log('ng after content init');
+  }
+
+  ngAfterContentChecked(): void {
+    console.log('ng after content checked');
+  }
+
+  ngAfterViewInit(): void {
+    console.log('ng after view init');
+  }
+
+  ngAfterViewChecked(): void {
+    console.log('ng after view checked');
+  }
 }
