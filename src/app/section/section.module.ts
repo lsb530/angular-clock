@@ -4,7 +4,8 @@ import {SectionComponent} from "./section.component";
 import {StopwatchModule} from "./stopwatch/stopwatch.module";
 import {RouterModule, Routes} from "@angular/router";
 import {StopwatchComponent} from "./stopwatch/stopwatch.component";
-import { ClockComponent } from './clock/clock.component';
+import {ClockComponent} from './clock/clock.component';
+import {PageToggleService} from "../share/page-toggle.service";
 
 const routes: Routes = [
   {
@@ -30,6 +31,9 @@ const routes: Routes = [
     CommonModule,
     StopwatchModule,
     RouterModule.forChild(routes)
+  ],
+  providers: [
+    PageToggleService
   ]
 })
 export class SectionModule { }

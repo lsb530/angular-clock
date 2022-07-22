@@ -1,7 +1,12 @@
 import { Injectable } from '@angular/core';
 import {Router} from "@angular/router";
+import {StopwatchComponent} from "../section/stopwatch/stopwatch.component";
 
-@Injectable()
+@Injectable(
+  {
+    providedIn: 'root'
+  }
+)
 export class PageToggleService {
 
   public routingCount: number = 0;
@@ -9,6 +14,10 @@ export class PageToggleService {
   constructor(
     private router: Router
   ) { }
+
+  plusCount() {
+    this.routingCount++;
+  }
 
   goPage(target: string) {
     this.routingCount++;
